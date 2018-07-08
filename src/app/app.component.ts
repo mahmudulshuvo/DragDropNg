@@ -7,13 +7,24 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-    result = 'Drag n Drop'
+    edge = {
+        top: true,
+        bottom: true,
+        left: true,
+        right: true
+    };
+
     constructor() { }
 
     ngOnInit() {
         //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
         //Add 'implements OnInit' to the class.
-        console.log(this.result)
+        console.log('Drag n Drop');
+    }
+
+    checkEdge(event) {
+        this.edge = event;
+        console.log('edge:', event);
     }
 
 }

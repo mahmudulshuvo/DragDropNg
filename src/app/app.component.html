@@ -2,13 +2,13 @@
 
     <div class="container-fluid" #myBounds>
 
-        <div ngDraggable class="square" (edge)="checkEdge($event)" [bounds]="myBounds" [inBounds]="inBounds" [zIndex]="100">
+        <div ngDraggable class="square" (edge)="checkEdge($event)" [bounds]="myBounds" [inBounds]="true">
         </div>
 
-        <div ngDraggable class="circle" (edge)="checkEdge($event)" [bounds]="myBounds" [inBounds]="inBounds" [zIndex]="50">
+        <div ngDraggable class="circle" (edge)="checkEdge($event)" [bounds]="myBounds" [inBounds]="true">
         </div>
 
-        <div ngDraggable class="triangle" (edge)="checkEdge($event)" [bounds]="myBounds" [inBounds]="inBounds" [zIndex]="1">
+        <div ngDraggable class="triangle" (edge)="checkEdge($event)" [bounds]="myBounds" [inBounds]="true">
         </div>
 
     </div>
