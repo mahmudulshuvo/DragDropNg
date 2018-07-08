@@ -1,23 +1,15 @@
-<div class="container">
-    <div class="container-fluid">
-        
-        <span class="circle" [ng2-draggable]="true">
-            <svg width="200" height="200" style="position: absolute; top: 50; left: 100;">
-                <circle cx="100" cy="100" r="50" stroke="green" stroke-width="4" fill="yellow" />
-            </svg>
-        </span>
+<div class="objects">
 
-        <span class="rectangle" [ng2-draggable]="true">
-            <svg width="200" height="110" style="position: absolute; top: 300; left: 100;">
-                <rect width="190" height="100" style="fill:rgb(0,0,255);stroke-width:3;stroke:rgb(0,0,0)" />
-            </svg>
-        </span>
+    <div class="container-fluid" #myBounds>
 
-        <span class="polygon" [ng2-draggable]="true">
-            <svg height="210" width="210" style="position: absolute; top: 450; left: 100;">
-                <polygon points="100,10 40,198 190,78 10,78 160,198" style="fill:lime;stroke:rgb(30, 100, 85);stroke-width:2;" /> Sorry, your browser does not support inline SVG.
-            </svg>
-        </span>
+        <div ngDraggable class="square" (edge)="checkEdge($event)" [bounds]="myBounds" [inBounds]="inBounds" [zIndex]="100">
+        </div>
+
+        <div ngDraggable class="circle" (edge)="checkEdge($event)" [bounds]="myBounds" [inBounds]="inBounds" [zIndex]="50">
+        </div>
+
+        <div ngDraggable class="triangle" (edge)="checkEdge($event)" [bounds]="myBounds" [inBounds]="inBounds" [zIndex]="1">
+        </div>
 
     </div>
 </div>

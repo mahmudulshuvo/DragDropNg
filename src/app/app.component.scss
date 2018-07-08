@@ -1,18 +1,43 @@
 
-.container-fluid {
-    width: 100%;
-    height: 100%;
+.objects {
+    display: flex;
 }
 
-/* Applies a grabbing hand on top of the div that's draggable*/
-.cursor-draggable {
-    cursor: grab;
-    cursor: -moz-grab;
-    cursor: -webkit-grab;
+.container-fluid {
+    width: 100%;
+    min-height: 91.5vh;
+    background-color: rgb(231, 236, 236);
+    margin: 50px;
+    border: 5px solid;
+    border-color: rgb(185, 182, 182) 
+ }
+
+ .square {
+    cursor: move;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(68, 77, 206);
+  }
+
+  .circle {
+    cursor: move;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(73, 153, 106);
+    border-radius: 50%;
+  }
+
+  .triangle {
+    cursor: move;
+	width: 200px;
+	height: 200px;
+	border-left: 100px solid transparent;
+	border-right: 100px solid transparent;
+	border-bottom: 200px solid rgb(150, 61, 61);
 }
- /*  Apply a "closed-hand" cursor during drag operation. */
-.cursor-draggable:active {
-    cursor: grabbing;
-    cursor: -moz-grabbing;
-    cursor: -webkit-grabbing;
+
+.ngDraggable {
+    width: 400px;
+    min-height: 91.5vh;
 }
+

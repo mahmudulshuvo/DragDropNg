@@ -3,16 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { Draggable } from './draggable.directive';
+import { AngularDraggableModule } from 'angular2-draggable';
 
 @NgModule({
     declarations: [
         AppComponent,
-         Draggable,
     ],
     imports: [
         BrowserModule,
-        AppRoutingModule
+        AppRoutingModule,
+        AngularDraggableModule
     ],
     providers: [],
     bootstrap: [AppComponent]
